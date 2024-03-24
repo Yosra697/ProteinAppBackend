@@ -1,10 +1,14 @@
 package isi.tn.proteinappbackend.service;
 
 import isi.tn.proteinappbackend.entity.*;
+import isi.tn.proteinappbackend.repository.CartRepositoy;
 import isi.tn.proteinappbackend.repository.OrderDetailRepository;
 import isi.tn.proteinappbackend.repository.ProductRepository;
 import isi.tn.proteinappbackend.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -22,7 +26,7 @@ public class OrderDetailService {
     private UserRepository userDao;
 
     @Autowired
-    private CartRepository cartDao;
+    private CartRepositoy cartDao;
 
     public List<OrderDetail> getAllOrderDetails(){
         List<OrderDetail> orderDetails = new ArrayList<>();

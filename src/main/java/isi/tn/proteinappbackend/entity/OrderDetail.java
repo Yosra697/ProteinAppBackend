@@ -1,5 +1,7 @@
 package isi.tn.proteinappbackend.entity;
 
+import jakarta.persistence.*;
+
 @Entity
 public class OrderDetail {
 
