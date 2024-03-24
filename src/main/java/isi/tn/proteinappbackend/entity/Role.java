@@ -1,7 +1,7 @@
-package com.ecom.entity;
+package isi.tn.proteinappbackend.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+
+import jakarta.persistence.*;
 
 @Entity
 public class Role {
