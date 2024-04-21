@@ -3,7 +3,7 @@ package isi.tn.proteinappbackend.controller;
 
 import isi.tn.proteinappbackend.entity.User;
 import isi.tn.proteinappbackend.service.UserService;
-import jakarta.annotation.PostConstruct;
+import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;

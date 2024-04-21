@@ -1,5 +1,6 @@
 package isi.tn.proteinappbackend.service;
 
+import isi.tn.proteinappbackend.configuration.JwtRequestFilter;
 import isi.tn.proteinappbackend.entity.*;
 import isi.tn.proteinappbackend.repository.CartRepositoy;
 import isi.tn.proteinappbackend.repository.OrderDetailRepository;
@@ -57,7 +58,7 @@ public class OrderDetailService {
                     orderInput.getContactNumber(),
                     orderInput.getAlternateContactNumber(),
                     ORDER_PLACED,
-                    product.getProductDiscountedPrice()*o.getQuantity(),
+                    product.getProductActualPrice()*o.getQuantity(),
                     product,
                     user);
 

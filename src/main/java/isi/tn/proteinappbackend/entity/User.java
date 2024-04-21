@@ -1,8 +1,6 @@
 package isi.tn.proteinappbackend.entity;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.util.Set;
 

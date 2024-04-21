@@ -1,14 +1,18 @@
 package isi.tn.proteinappbackend.service;
 
+import isi.tn.proteinappbackend.configuration.JwtRequestFilter;
+import isi.tn.proteinappbackend.entity.Cart;
 import isi.tn.proteinappbackend.entity.Product;
 import isi.tn.proteinappbackend.entity.User;
+import isi.tn.proteinappbackend.repository.CartRepositoy;
 import isi.tn.proteinappbackend.repository.ProductRepository;
 import isi.tn.proteinappbackend.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.awt.print.Pageable;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -21,7 +25,7 @@ public class ProductService {
     @Autowired
     private UserRepository userDao;
     @Autowired
-    private CartRepository cartDao;
+    private CartRepositoy cartDao;
 
     public Product addNewProduct(Product product) {
         return productDao.save(product);

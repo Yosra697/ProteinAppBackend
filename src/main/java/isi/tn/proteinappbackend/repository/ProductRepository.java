@@ -1,10 +1,11 @@
 package isi.tn.proteinappbackend.repository;
 
 import isi.tn.proteinappbackend.entity.Product;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import java.awt.print.Pageable;
+
 import java.util.List;
 
 @Repository

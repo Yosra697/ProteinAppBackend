@@ -1,6 +1,6 @@
 package isi.tn.proteinappbackend.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.util.Set;
 
@@ -13,7 +13,6 @@ public class Product {
     private String productName;
     @Column(length = 1000)
     private String productDescription;
-    private Double productDiscountedPrice;
     private Double productActualPrice;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade =CascadeType.ALL)
@@ -65,14 +64,6 @@ public class Product {
         this.productDescription = productDescription;
     }
 
-    public Double getProductDiscountedPrice() {
-        return productDiscountedPrice;
-    }
-
-    public void setProductDiscountedPrice(Double productDiscountedPrice) {
-        this.productDiscountedPrice = productDiscountedPrice;
-    }
-
     public Double getProductActualPrice() {
         return productActualPrice;
     }
@@ -87,7 +78,6 @@ public class Product {
         this.productId = productId;
         this.productName = productName;
         this.productDescription = productDescription;
-        this.productDiscountedPrice = productDiscountedPrice;
         this.productActualPrice = productActualPrice;
     }
 }

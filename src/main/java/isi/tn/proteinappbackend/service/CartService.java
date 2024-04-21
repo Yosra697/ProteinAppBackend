@@ -1,5 +1,6 @@
 package isi.tn.proteinappbackend.service;
 
+import isi.tn.proteinappbackend.configuration.JwtRequestFilter;
 import isi.tn.proteinappbackend.entity.Cart;
 import isi.tn.proteinappbackend.entity.Product;
 import isi.tn.proteinappbackend.entity.User;
