@@ -35,4 +35,24 @@ public class UserContoller{
     public String forUser(){
         return "This URL is only accessible to the user";
     }
+    
+    @GetMapping({"/forAdmin/findAllUsers"})
+    @PreAuthorize("hasRole('Admin')")
+    public Iterable<User> findAllUsers(){return userService.findAllUsers();}
+
+    @GetMapping({"/forAdmin/removeUser"})
+    @PreAuthorize("hasRole('Admin')")
+    public String remove(Id id){return userService.remove(id); }
+
+
+    @GetMapping({"/forAdmin/updateUser"})
+    @PreAuthorize("hasRole('Admin')")
+    public String updateUser(Id id, User user){ return userService.updateUser(id, user);}
+
+    @GetMapping({"/forAdmin/findUser"})
+    @PreAuthorize("hasRole('Admin')")
+    public Optional<User> findUserById(Id id) {
+        return userService.findUserById(id);
+    }
+
 }
