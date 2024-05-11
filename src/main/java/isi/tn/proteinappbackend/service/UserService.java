@@ -57,7 +57,30 @@ public class UserService {
 
         return userDao.save(user);
     }
+ public Iterable<User> findAllUsers() {
+        return userDao.findAll();
+    }
 
+
+    public String remove(Id id) {
+        userDao.deleteById(id.toString());
+        return "deleted";
+    }
+
+
+    public String updateUser(Id id, User user) {
+        User updatedUser = userDao.findById(id.toString()).get();
+        updatedUser.setUserName(user.getUserName());
+        updatedUser.setUserFirstName(user.getUserFirstName());
+        updatedUser.setUserLastName(user.getUserLastName());
+        updatedUser.setUserPassword(user.getUserPassword());
+        userDao.save(updatedUser);
+        return "Updated";
+    }
+
+    public Optional<User> findUserById(Id id) {
+        return userDao.findById(id.toString());
+    }
     public String getEncodedPassword(String password) {
         return passwordEncoder.encode(password);
     }
